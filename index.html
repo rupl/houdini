@@ -1,49 +1,247 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>Houdini, the Future of CSS</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+    <link rel="stylesheet" href="css/custom.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Houdini</h1>
+          <h2 style="position: relative; top: -.5em;">The Future of CSS</h2>
+          <img src="img/drupalcon-logo-wide.svg" alt="DrupalCon Vienna 2017">
+          <time class="fragment expire" datetime="2017-12-12">12. Dec 2017</time>
+        </section>
+        <!-- section>
+          <p>If you're reading these online:</p>
+          <h2 class="expire">12. Dec 2017</h2>
+          <p class="fragment">Houdini is an upcoming, unstable set of specifications.</p>
+          <p class="fragment">Please check the many links<br> within the deck for fresh, valid info!</p>
+        </section -->
+        <section>
+          <h2>Chris Ruppel</h2>
+          <p>Freiburg 🇩🇪</p>
+          <p><a href="https://twitter.com/rupl">twitter @rupl</a></p>
+          <p class="fragment"><a href="https://chrisruppel.com/work/">hire me for frontend performance ⚡</a></p>
+        </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <section>
+          <section data-state="major">
+            <h2>The future of CSS <span class="fragment correction">Specs</span></h2>
+            <p class="fragment">CSS remains easy to author:<br> simple declarative syntax</p>
+            <p class="fragment">CSS can evolve more quickly with Houdini.</p>
+          </section>
+          <section>
+            <h2>Extensible Web Manifesto</h2>
+            <p class="fragment">Favor flexible, low-level APIs</p>
+            <p class="fragment">Avoid opinionated, high-level features</p>
+            <p class="fragment">Ship quickly and encourage developer feedback</p>
+            <p class="fragment"><a href="https://extensiblewebmanifesto.org/">Read the Manifesto</a></p>
+          </section>
+        </section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+        <section>
+          <section data-state="major">
+            <h2>Why Horizons?</h2>
+            <p class="fragment">Pure frontend tech. Use on top of Drupal.</p>
+            <p class="fragment">Houdini is still on the horizon.</p>
+            <p class="fragment"><strong>Nothing</strong> is ready for production!</p>
+          </section>
+          <section>
+            <h2>Cross-Browser Initiative</h2>
+            <p>All major vendors are involved. Very rare.<br> It's a universal problem worth solving.</p>
+          </section>
+          <section>
+            <h2>Is Houdini Ready Yet?</h2>
+            <p><a href="https://ishoudinireadyyet.com">ishoudinireadyyet.com</a></p>
+          </section>
+        </section>
+
+        <section>
+          <section data-state="major">
+            <h1>Modify the Browser Engine</h1>
+          </section>
+          <section>
+            <h2>Today</h2>
+            <br>
+            <figure>
+              <img src="img/smashing-03-rendering-process-opt.png" alt="Browser rendering diagram displaying the DOM with full JavaScript access and the CSSOM with partial JavaScript access.">
+              <figcaption>Image credit: <a href="https://www.smashingmagazine.com/2016/03/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of/">Smashing Magazine</a></figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>Polyfilling CSS with JS</h2>
+            <figure>
+              <img src="img/smashing-04-rendering-process-polyfilled-opt.png" alt="Browser rendering diagram displaying effect of JavaScript polyfilling process on the render pipeline.">
+              <figcaption>Image credit: <a href="https://www.smashingmagazine.com/2016/03/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of/">Smashing Magazine</a></figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>CSS with Houdini</h2>
+            <br>
+            <figure>
+              <img src="img/smashing-05-spec-coverage-opt.png" alt="Future browser rendering diagram with proposed Houdini specs in place.">
+              <figcaption>Image credit: <a href="https://www.smashingmagazine.com/2016/03/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of/">Smashing Magazine</a></figcaption>
+            </figure>
+          </section>
+        </section>
+
+        <section>
+          <section data-state="major">
+            <h1>Houdini Specs</h1>
+          </section>
+          <section>
+            <h2>CSS Parser API</h2>
+            <ul>
+              <li class="fragment">Add new syntax: blocks, pseudo-classes, nesting</li>
+              <li class="fragment"><code>@extends</code> or <code>@media (offline: true)</code></li>
+              <li class="fragment">In-progress under <a href="https://github.com/WICG/CSS-Parser-API">WICG</a> instead of Houdini TF</li>
+            </ul>
+          </section>
+          <section>
+            <h2>CSS Typed Object Model</h2>
+            <p><pre><code class="language-js">// Without variable types
+el.style.left = 5 + 'px';
+
+// With variable types
+el.style.left = new CSSUnitValue(5, 'px'));</code></pre></p>
+            <p class="fragment">Adds typed variables to CSSOM</p>
+            <p class="fragment">Allows more values to be animated/transitioned.</p>
+          </section>
+          <section>
+            <h2>CSS Props and Values API</h2>
+            <p><pre><code class="language-js">CSS.registerProperty({
+  name: '--circle-radius',
+  syntax: '&lt;number>',
+  initialValue: '0',
+  inherits: true, // defaults to false
+});</code></pre></p>
+            <p class="fragment">Supercharges <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">CSS Custom Properties</a></p>
+            <p class="fragment">Define typed, animatable, transitionable props</p>
+          </section>
+          <section>
+            <h2>Worklets</h2>
+            <p class="fragment">"mini" Web Workers</p>
+            <table class="fragment">
+              <thead>
+                <tr>
+                  <td></td>
+                  <th>Web Workers</th>
+                  <th>Worklets</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Off-thread</th>
+                  <td>✅</td>
+                  <td>✅</td>
+                </tr>
+                <tr>
+                  <th>DOM access</th>
+                  <td>❌</td>
+                  <td>❌</td>
+                </tr>
+                <tr>
+                  <th>Event Listeners</th>
+                  <td>✅</td>
+                  <td>❌</td>
+                </tr>
+                <tr>
+                  <th>Parallelism</th>
+                  <td>❌</td>
+                  <td>✅</td>
+                </tr>
+                <tr>
+                  <th>Execute quickly</th>
+                  <td>❌</td>
+                  <td>✅</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <h2>CSS Layout API</h2>
+            <pre><code class="language-css">.gallery {
+  display: layout('masonry');
+}</code></pre>
+<pre><code class="language-js">&lt;script>
+  CSS.layoutWorklet.addModule('./masonry.js');
+&lt;/script></code></pre>
+            <p class="fragment">Custom layouts with simple CSS declaration!</p>
+          </section>
+          <section>
+            <h2>CSS Paint API</h2>
+            <pre><code class="language-css">.alert {
+  background-image: paint('face');
+  --face-mood: happy;
+}</code></pre>
+<pre><code class="language-js">&lt;script>
+  CSS.paintWorklet.addModule('./face.js');
+&lt;/script></code></pre>
+            <p class="fragment">Declare complex, interactive elements in CSS</p>
+          </section>
+          <section>
+            <h2>Composited Scrolling<br> and Animation</h2>
+            <p class="fragment">Compositor Worklets (limited to non-layout CSS props)</p>
+            <p class="fragment">Interactions on-par with native apps!!!</p>
+            <p class="fragment">CSS Snap, <code>position: sticky</code>,<br> Animations using gesture as timing function.</p>
+          </section>
+        </section>
+
+        <section>
+          <h2>In Progress</h2>
+          <p><a href="https://ishoudinireadyyet.com">ishoudinireadyyet.com</a></p>
+        </section>
+
+        <section>
+          <h1>Questions?</h1>
+        </section>
+        <section>
+          <h2>Sprint Reminder</h2>
+          <p>Friday 29. September</p>
+          <p>Look for the <strong>Sprint Lounge</strong> on the map.</p>
+        </section>
+        <section>
+          <h1>Ende</h1>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        history: true,
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
 </html>

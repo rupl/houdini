@@ -1,0 +1,77 @@
+/**
+ * Custom CSS for Chris' slides.
+ */
+
+.reveal section img {
+  border: none;
+  box-shadow: none;
+}
+.reveal figure {}
+.reveal figure figcaption {
+  margin-top: 4em;
+  font-size: .5em;
+  font-style: italic;
+  opacity: .75;
+}
+
+.reveal section .expire {
+  padding: 0 .5em;
+  color: #f33;
+  border: 5px solid #f33;
+  border-radius: 16px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(1em) rotate(-11deg);
+}
+.reveal section .expire::before {
+  content: 'Best Read Before: ';
+  display: block;
+}
+
+.reveal section .qr {
+  width: 512px;
+  height: 512px;
+}
+
+.reveal section .correction {
+  display: inline-block;
+  color: #f44;
+  transform: translate(-.2em, -.1em) rotate(-5deg);
+}
+.reveal section .correction::before {
+  content: '^';
+  display: inline-block;
+  font-size: .8em;
+  font-weight: 200;
+  vertical-align: sub;
+  transform: translate(0, .3em) rotate(5deg);
+}
+
+.reveal table {
+
+}
+.reveal table thead th {
+  font-weight: 700;
+}
+.reveal table tbody th {
+  font-weight: 400;
+  opacity: .5;
+}
+
+.reveal pre code {
+  padding: 1em;
+}
+
+/*** Slide Backgrounds ********************************************************/
+
+.major .slide-background.present {
+  background: #222;
+}
+.major .reveal * {
+  color: #ddd;
+}
+
+.major .reveal strong {
+  color: #fff;
+}
